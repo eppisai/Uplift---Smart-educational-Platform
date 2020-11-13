@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
+import { Row, Col, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Meta from '../components/Meta'
-import {
-  listProductDetails,
-  createProductReview,
-} from '../actions/productActions'
+import {listProductDetails,createProductReview} from '../actions/productActions'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
+import ReactPlayer from 'react-player/youtube'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
@@ -71,7 +69,7 @@ const ProductScreen = ({ history, match }) => {
           <Meta title={product.name} />
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              <ReactPlayer url="https://www.youtube.com/watch?v=bdtWVQ-P_7U&ab_channel=PewDiePie" width="auto"/>
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
