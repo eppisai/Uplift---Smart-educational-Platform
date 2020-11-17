@@ -1,6 +1,6 @@
 # Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask
+from flask import Flask, redirect
 from flask import request
 
 # Web scraping, pptx, requests imports                                                                                     @****
@@ -20,7 +20,7 @@ app = Flask(__name__)
 # the associated function.
 
 
-@app.route('/')
+@app.route('/flask/')
 # ‘/’ URL is bound with hello_world() function.
 def hello_world():
     args = request.args
@@ -116,7 +116,7 @@ def hello_world():
             self.subtitle = self.slide.placeholders[1]
             self.subtitle.text = data[1]
 
-    slides = [[soup.h1.text, " by python for " + user+":)", 0]]
+    slides = [[soup.h1.text, " by " + user+"", 0]]
     index_slide = [first_slide, second_slide, third_slide,
                    fourth_slide, fifth_slide, sixth_slide, seventh_slide]
     indexing = []
@@ -131,7 +131,7 @@ def hello_world():
 
     prs.save('something.pptx')
 
-    return 'Hello World'
+    return redirect("http://localhost:3000/flask", code=302)
 
 
 # main driver function
