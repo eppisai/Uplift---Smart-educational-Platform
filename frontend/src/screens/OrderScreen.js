@@ -211,6 +211,7 @@ const OrderScreen = ({ match, history }) => {
               {loadingDeliver && <Loader />}
               {userInfo &&
                 userInfo.isAdmin &&
+                userInfo.isCreator &&
                 order.isPaid &&
                 !order.isDelivered && (
                   <ListGroup.Item>
