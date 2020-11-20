@@ -12,8 +12,8 @@ export default function ConvertToPPT() {
                         <label>User</label>
                         <input type="text" name="user"></input>
                         <button type="submit" onClick={ () => {
-  alert("hello")
-}}>Submit</button>
+                        alert("presentation can been made!")
+                        }}>Submit</button>
                     </form>
                 </div>
                
