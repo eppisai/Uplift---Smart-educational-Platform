@@ -67,15 +67,10 @@ const Header = () => {
               )}
               {userInfo && userInfo.isCreator && (
                 <NavDropdown title='Creator' id='adminmenu'>
-                  <LinkContainer to='/admin/userlist'>
-                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  <LinkContainer to='/cc'>
+                    <NavDropdown.Item>Course Creator</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/productlist'>
-                    <NavDropdown.Item>Products</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/admin/orderlist'>
-                    <NavDropdown.Item>Orders</NavDropdown.Item>
-                  </LinkContainer>
+        
                 </NavDropdown>
               )}
             </Nav>
