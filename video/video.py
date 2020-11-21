@@ -38,7 +38,7 @@ mean_height = int(mean_height / num_of_images)
 # Resizing of the images to give 
 # them same width and height 
 for file in os.listdir('.'): 
-	if file.endswith("png"): 
+	if file.endswith("png") or file.endswith("png") or file.endswith("png"): 
 		# opening image using PIL Image 
        # Image.open("sample1.jpg").save("sample1.png");
 		im = Image.open(os.path.join(path, file)) 
