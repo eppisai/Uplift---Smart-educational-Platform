@@ -36,9 +36,6 @@ def hello_world():
     except:
         print("Error opening the URL")
 
-        
-        
-
     soup = BeautifulSoup(source, 'lxml')
     # the next line gives the entire source code                                                                          @****
     # print(soup.prettify()) <--------------this is source code!
@@ -49,21 +46,20 @@ def hello_world():
         article += heading.name + ' ' + heading.text.strip()
 
     def getdata(url):
-     r = requests.get(url)
-     return r.text
-
+        r = requests.get(url)
+        return r.text
 
     htmldata = getdata("https://www.geeksforgeeks.org/")
     soup2 = BeautifulSoup(htmldata, 'html.parser')
     for item in soup2.find_all('img'):
-         try:
+        try:
             source = requests.get(item['src'])
-         except:
+        except:
             print("Error opening the URL")
 
-         file = open("sample_image.png", "wb")
-         file.write(source.content)
-         file.close()
+        file = open("sample_image.png", "wb")
+        file.write(source.content)
+        file.close()
 
     # ..                                                                                                                     ****
     first_slide = ""
@@ -125,6 +121,15 @@ def hello_world():
     prs = Presentation()
     # the format of this class is to refer to a 'list if lists'(make sure you remember this,or  it can lead to a frustrating mistake).
     # i found the class format, as the only way to add a second slide.so every required data is put into that format
+
+    img_path = '1.jpg'
+    blank_slide_layout = prs.slide_layouts[1]
+    slide = prs.slides.add_slide(blank_slide_layout)
+    left = top = Inches(1)
+    pic = slide.shapes.add_picture(img_path, 0, 0)
+    left = Inches(0)
+    height = Inches(0)
+    pic = slide.shapes.add_picture(img_path, left, top, height=height)
 
     class MySlide:
         def __init__(self, data):
