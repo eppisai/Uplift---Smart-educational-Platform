@@ -1,12 +1,14 @@
 import React from 'react'
 import {Card,Form,Row,Col,Container,Button} from 'react-bootstrap'
+import ReactPlayer from 'react-player'
+import myVideo from '../new_filename.mp4'
 
 
 export default function ConvertToPPT() {
     return (
         <Container fluid>
-            <Row>
-                <Col>
+            <Col>
+                <Row>
                     <Card style={{width:"max-content"}}>
                         <Card.Body>
                             <Form  method="get" action="/flask/">
@@ -28,9 +30,14 @@ export default function ConvertToPPT() {
                             </Form>
                         </Card.Body>
                     </Card>
-                </Col>
+                </Row>
+                <Row>
+                    <div className='player-wrapper'>
+                        <ReactPlayer url={myVideo}/>
+                    </div>
+                </Row>
                
-            </Row>
+            </Col>
             
         </Container>
     )
