@@ -7,8 +7,8 @@ import myVideo from '../video/new_filename.mp4'
 export default function ConvertToPPT() {
     return (
         <Container fluid>
-            <Col>
-                <Row>
+            <Row>
+                <Col>
                     <Card style={{width:"max-content"}}>
                         <Card.Body>
                             <Form  method="get" action="/flask/">
@@ -30,14 +30,14 @@ export default function ConvertToPPT() {
                             </Form>
                         </Card.Body>
                     </Card>
-                </Row>
-                <Row>
+                </Col>
+                <Col>
                     <div className='player-wrapper'>
-                        <ReactPlayer url={myVideo}/>
+                        <ReactPlayer url={myVideo} width='80%' height="288px" controls = {true}/>
                     </div>
-                </Row>
+                </Col>
                
-            </Col>
+            </Row>
             
         </Container>
     )
