@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card,Form,Row,Col,Container,Button} from 'react-bootstrap'
 import ReactPlayer from 'react-player'
-import myVideo from '../new_filename.mp4'
+import myVideo from '../video/new_filename.mp4'
 
 
 export default function ConvertToPPT() {
