@@ -1,24 +1,37 @@
 import React from 'react'
+import {Card,Form,Row,Col,Container,Button} from 'react-bootstrap'
 
 
 export default function ConvertToPPT() {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <form method="get" action="/flask/">
-                        <label>Topic</label>
-                        <input type="text" name="topic"></input>
-                        <label>User</label>
-                        <input type="text" name="user"></input>
-                        <button type="submit" onClick={ () => {
-                        alert("presentation can been made!")
-                        }}>Submit</button>
-                    </form>
-                </div>
+        <Container fluid>
+            <Row>
+                <Col>
+                    <Card style={{width:"max-content"}}>
+                        <Card.Body>
+                            <Form  method="get" action="/flask/">
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Label>Topic</Form.Label>
+                                    <Form.Control type="text" name="topic"/>
+                                    <Form.Text className="text-muted">
+                                        Please fill your topic above.
+                                    </Form.Text>
+                                </Form.Group>
+
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Label>User</Form.Label>
+                                    <Form.Control type="text" name="user" />
+                                </Form.Group>
+                                <Button variant="primary" type="submit">
+                                    Submit
+                                </Button>
+                            </Form>
+                        </Card.Body>
+                    </Card>
+                </Col>
                
-            </div>
+            </Row>
             
-        </div>
+        </Container>
     )
 }
