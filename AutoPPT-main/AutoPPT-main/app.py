@@ -36,6 +36,9 @@ def hello_world():
     except:
         print("Error opening the URL")
 
+        
+        
+
     soup = BeautifulSoup(source, 'lxml')
     # the next line gives the entire source code                                                                          @****
     # print(soup.prettify()) <--------------this is source code!
@@ -44,6 +47,23 @@ def hello_world():
     article = " "
     for heading in soup.find_all(["p", "h2", "h3"]):
         article += heading.name + ' ' + heading.text.strip()
+
+    def getdata(url):
+     r = requests.get(url)
+     return r.text
+
+
+    htmldata = getdata("https://www.geeksforgeeks.org/")
+    soup2 = BeautifulSoup(htmldata, 'html.parser')
+    for item in soup2.find_all('img'):
+         try:
+            source = requests.get(item['src'])
+         except:
+            print("Error opening the URL")
+
+         file = open("sample_image.png", "wb")
+         file.write(source.content)
+         file.close()
 
     # ..                                                                                                                     ****
     first_slide = ""
