@@ -156,7 +156,7 @@ def hello_world():
 
     prs.save('something.pptx')
 
-    return redirect("http://localhost:3000/flask", code=302)
+    return redirect("http://localhost:3000/download", code=302)
 
 
 # main driver function

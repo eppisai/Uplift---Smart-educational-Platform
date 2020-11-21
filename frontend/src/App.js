@@ -20,6 +20,7 @@ import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 import ConvertToPPT from "./components/ConvertToPPT"
 import CourseCreator from "./components/CourseCreator"
+import Download from "./components/Download"
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
           <Route path='/flask' component={ConvertToPPT} />
           <Route path='/cc' component={CourseCreator} />
+          <Route path='/download' component={Download} />
           <Route
             path='/admin/productlist'
             component={ProductListScreen}
