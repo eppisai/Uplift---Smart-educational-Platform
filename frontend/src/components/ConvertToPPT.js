@@ -25,18 +25,12 @@ export default function ConvertToPPT() {
                                     <Form.Control type="text" name="user" />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
-                                    Submit
+                                    Generate
                                 </Button>
                             </Form>
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <div className='player-wrapper'>
-                        <ReactPlayer url={myVideo} width='80%' height="288px" controls = {true}/>
-                    </div>
-                </Col>
-               
+                </Col>            
             </Row>
             
         </Container>
