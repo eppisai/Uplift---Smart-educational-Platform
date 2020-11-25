@@ -7,7 +7,7 @@
 <li>1. npm install </li>
 <li>2. npm run dev </li>
 <h2> Note </h2>
-<li> The above commands are in outermost directory,not inside backend or frontend, but if needed backend and fronted can be run seperately</li>
+<li> The above commands are in outermost directory,not inside backend or frontend, but if needed backend and fronted can be run seperately, and setup your own mongoDb credentials or you can text us for access to our database</li>
 
 
 <h1> This project is made by collaborative effort of me with Akash and Palak</h1>
