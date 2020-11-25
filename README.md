@@ -1,7 +1,19 @@
-# Smart Educational Platform, for educators and students
-<p>The application is having all the features of modern educational platforms like Course making for instructor.. akash and palak baki ka likho bhai.. </p> 
+# Smart Educational Platform, for educators and students 🤓
+<p>The application is having all the features of modern educational platforms like Course making for instructor.
+  Here we have made a feature to get the video and PPTX of any topic you would like to study.
+</p> 
 
-<h1> How to run </h1>
+# Features - 
+ 1. Get the intractive courses of any topic.
+ 2. PPTX generation for later reference.
+ 3. Course making eaiser for instructor.
+
+# Future update - 
+ 1. Diffrentiate the quality content on web.
+ 2. Mobile app conversion.
+ 3. Proper generation of video.
+
+# How to run 
 <p> Make sure you have node package manager installed</p>
 <h1> Commands </h1>
 <li>1. npm install </li>
