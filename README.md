@@ -22,9 +22,8 @@
 <li> The above commands are in outermost directory,not inside backend or frontend, but if needed backend and fronted can be run seperately, and setup your own mongoDb credentials or you can text us for access to our database</li>
 
 
-<h1> This project is made by collaborative effort of me with Akash and Palak</h1>
-
-<h2> Contact Us,In case of error or having problem setting up the project </h2>
+<h3> Contact Us, In case of error or having problem setting up the project </h3>
 <li><a href = "https://www.facebook.com/thealpha.guy.1/"> Aman </a></li>
 <li><a href = "https://www.facebook.com/akash.saxena.9465177"> Akash </a></li>
 <li><a href = "https://www.facebook.com/Palak.578"> Palak </a></li>
+
